@@ -6,7 +6,7 @@ JAVA_HOME=/gapp/x64linux/opt/java/jdk/jdk1.8.0_60
 export PATH=$JAVA_HOME/bin:/gscmnt/gc2801/analytics/jeldred/GenomeSTRiP/bin:$PATH
 
 # linus261 specific
-export LD_LIBRARY_PATH=/tmp/idas-local2/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/tmp/idas-local/lib:$LD_LIBRARY_PATH
 
 echo $PATH
 #export PATH=/gscmnt/gc2801/analytics/jeldred/drmaa_versions/lsf_drmaa-1.0.4:/gscmnt/gc2801/analytics/jeldred/GenomeSTRiP/bin:$PATH
