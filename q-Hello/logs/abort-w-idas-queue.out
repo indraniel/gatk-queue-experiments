@@ -1,0 +1,126 @@
+java version "1.8.0_60"
+Java(TM) SE Runtime Environment (build 1.8.0_60-b27)
+Java HotSpot(TM) 64-Bit Server VM (build 25.60-b23, mixed mode)
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/gscmnt/gc2802/halllab/idas/jira/BIO-1662/vendor/local/jars/GenomeAnalysisTK-3.5-idas-experimental-a4da018-2016.03.30.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/gscmnt/gc2802/halllab/idas/jira/BIO-1662/vendor/github/gatk-protected/protected/gatk-queue-package-distribution/target/gatk-queue-package-distribution-3.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+INFO  12:28:42,614 QScriptManager - Compiling 1 QScript
+DEBUG 12:28:42,616 QScriptManager - Compilation directory: /tmp/Q-Classes-1316659736405059236
+INFO  12:28:45,709 QScriptManager - Compilation complete
+INFO  12:28:45,886 HelpFormatter - ----------------------------------------------------------------------
+INFO  12:28:45,887 HelpFormatter - Queue v3.5-1-ga4da018, Compiled 2016/03/30 16:46:54
+INFO  12:28:45,887 HelpFormatter - Copyright (c) 2012 The Broad Institute
+INFO  12:28:45,887 HelpFormatter - For support and documentation go to http://www.broadinstitute.org/gatk
+DEBUG 12:28:45,888 HelpFormatter - Current directory: /gscuser/idas/genome-strip-test/q-Hello
+INFO  12:28:45,889 HelpFormatter - Program Args: -S /gscmnt/gc2801/analytics/jeldred/scripts/Hello.q -disableJobReport -l DEBUG -jobRunner Drmaa -jobQueue short -run
+INFO  12:28:45,890 HelpFormatter - Executing as idas@linus261.gsc.wustl.edu on Linux 2.6.35-31-generic amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27.
+INFO  12:28:45,890 HelpFormatter - Date/Time: 2016/03/30 12:28:45
+INFO  12:28:45,890 HelpFormatter - ----------------------------------------------------------------------
+INFO  12:28:45,891 HelpFormatter - ----------------------------------------------------------------------
+INFO  12:28:45,900 QCommandLine - Scripting HelloWorld
+DEBUG 12:28:45,924 QGraph - adding QNode: 0
+INFO  12:28:45,939 QCommandLine - Added 2 functions
+INFO  12:28:45,942 QGraph - Generating graph.
+INFO  12:28:45,953 QGraph - Running jobs.
+DEBUG 12:28:46,038 FunctionEdge - Starting: /gscuser/idas/genome-strip-test/q-Hello > echo hello world
+INFO  12:28:46,038 FunctionEdge - Output written to /gscuser/idas/genome-strip-test/q-Hello/Hello-1.out
+[MGI] Gonna submit an LSF job dude!
+[MGI] Entered runJob dude
+[MGI] Got a Memory object dude
+[MGI] Got a JnaJobTemplate object dude
+Job <9104346> is submitted to default queue <long>.
+[MGI] Got past checkError dude
+INFO  12:28:51,997 DrmaaJobRunner - Submitted job id: 9104346
+DEBUG 12:28:51,999 FunctionEdge - Starting: /gscuser/idas/genome-strip-test/q-Hello > echo hello world 2
+INFO  12:28:51,999 FunctionEdge - Output written to /gscuser/idas/genome-strip-test/q-Hello/Hello-2.out
+[MGI] Gonna submit an LSF job dude!
+[MGI] Entered runJob dude
+[MGI] Got a Memory object dude
+[MGI] Got a JnaJobTemplate object dude
+*** glibc detected *** java: double free or corruption (out): 0x00007f817c284dc0 ***
+======= Backtrace: =========
+/lib/libc.so.6(+0x788d6)[0x7f8196eae8d6]
+/lib/libc.so.6(cfree+0x73)[0x7f8196eb4f13]
+/opt/lsf9/9.1/linux2.6-glibc2.3-x86_64/lib/liblsf.so(getAskedHosts_+0x96)[0x7f8179518e4a]
+/opt/lsf9/9.1/linux2.6-glibc2.3-x86_64/lib/libbat.so(modifyJobInformation+0x1d63)[0x7f817986904b]
+/opt/lsf9/9.1/linux2.6-glibc2.3-x86_64/lib/libbat.so(lsb_submit2+0x656)[0x7f8179848e17]
+/opt/lsf9/9.1/linux2.6-glibc2.3-x86_64/lib/libbat.so(+0x760ba)[0x7f817986e0ba]
+/opt/lsf9/9.1/linux2.6-glibc2.3-x86_64/lib/libbat.so(lsb_submit+0x183)[0x7f81798487b1]
+/tmp/idas-local/lib/libdrmaa.so(+0xade7)[0x7f8179badde7]
+/tmp/idas-local/lib/libdrmaa.so(+0xab32)[0x7f8179badb32]
+/tmp/idas-local/lib/libdrmaa.so(drmaa_run_job+0x144)[0x7f8179bc1d14]
+/tmp/jna6899742752492926046.tmp(ffi_call_unix64+0x4c)[0x7f817a2a72d0]
+/tmp/jna6899742752492926046.tmp(ffi_call+0x1ff)[0x7f817a2a6e3f]
+/tmp/jna6899742752492926046.tmp(+0xb397)[0x7f817a2a1397]
+/tmp/jna6899742752492926046.tmp(ffi_closure_unix64_inner+0x88)[0x7f817a2a7008]
+/tmp/jna6899742752492926046.tmp(ffi_closure_unix64+0x46)[0x7f817a2a7438]
+[0x7f818638e794]
+======= Memory map: ========
+00400000-00401000 r-xp 00000000 00:1e 8232201                            /gapp/x64linux/opt/java/jdk/jdk1.8.0_60/bin/java
+00600000-00601000 rw-p 00000000 00:1e 8232201                            /gapp/x64linux/opt/java/jdk/jdk1.8.0_60/bin/java
+024ed000-04d33000 rw-p 00000000 00:00 0                                  [heap]
+a2a00000-a9b80000 rw-p 00000000 00:00 0
+a9b80000-e0e00000 ---p 00000000 00:00 0
+e0e00000-100000000 rw-p 00000000 00:00 0
+100000000-1005a0000 rw-p 00000000 00:00 0
+1005a0000-140000000 ---p 00000000 00:00 0
+7f8174000000-7f8175c13000 rw-p 00000000 00:00 0
+7f8175c13000-7f8178000000 ---p 00000000 00:00 0
+7f817843a000-7f8178450000 r-xp 00000000 08:03 26166116                   /lib/libgcc_s.so.1
+7f8178450000-7f817864f000 ---p 00016000 08:03 26166116                   /lib/libgcc_s.so.1
+7f817864f000-7f8178650000 r--p 00015000 08:03 26166116                   /lib/libgcc_s.so.1
+7f8178650000-7f8178651000 rw-p 00016000 08:03 26166116                   /lib/libgcc_s.so.1
+7f8178651000-7f8178667000 r-xp 00000000 08:03 26169480                   /lib/libresolv-2.11.1.so
+7f8178667000-7f8178866000 ---p 00016000 08:03 26169480                   /lib/libresolv-2.11.1.so
+7f8178866000-7f8178867000 r--p 00015000 08:03 26169480                   /lib/libresolv-2.11.1.so
+7f8178867000-7f8178868000 rw-p 00016000 08:03 26169480                   /lib/libresolv-2.11.1.so
+7f8178868000-7f817886a000 rw-p 00000000 00:00 0
+7f817886a000-7f817886f000 r-xp 00000000 08:03 26169472                   /lib/libnss_dns-2.11.1.so
+7f817886f000-7f8178a6e000 ---p 00005000 08:03 26169472                   /lib/libnss_dns-2.11.1.so
+7f8178a6e000-7f8178a6f000 r--p 00004000 08:03 26169472                   /lib/libnss_dns-2.11.1.so
+7f8178a6f000-7f8178a70000 rw-p 00005000 08:03 26169472                   /lib/libnss_dns-2.11.1.so
+7f8178a70000-7f8178a71000 ---p 00000000 00:00 0
+7f8178a71000-7f8179271000 rw-p 00000000 00:00 0
+7f8179271000-7f8179288000 r-xp 00000000 08:03 26171005                   /lib/libnsl-2.11.1.so
+7f8179288000-7f8179487000 ---p 00017000 08:03 26171005                   /lib/libnsl-2.11.1.so
+7f8179487000-7f8179488000 r--p 00016000 08:03 26171005                   /lib/libnsl-2.11.1.so
+7f8179488000-7f8179489000 rw-p 00017000 08:03 26171005                   /lib/libnsl-2.11.1.so
+7f8179489000-7f817948b000 rw-p 00000000 00:00 0
+7f817948b000-7f8179594000 r-xp 00000000 08:03 18383236                   /opt/lsf9/9.1/linux2.6-glibc2.3-x86_64/lib/liblsf.so
+7f8179594000-7f8179694000 ---p 00109000 08:03 18383236                   /opt/lsf9/9.1/linux2.6-glibc2.3-x86_64/lib/liblsf.so
+7f8179694000-7f81796b2000 rw-p 00109000 08:03 18383236                   /opt/lsf9/9.1/linux2.6-glibc2.3-x86_64/lib/liblsf.so
+7f81796b2000-7f81797f8000 rw-p 00000000 00:00 0
+7f81797f8000-7f8179a47000 r-xp 00000000 08:03 18383227                   /opt/lsf9/9.1/linux2.6-glibc2.3-x86_64/lib/libbat.so
+7f8179a47000-7f8179b47000 ---p 0024f000 08:03 18383227                   /opt/lsf9/9.1/linux2.6-glibc2.3-x86_64/lib/libbat.so
+7f8179b47000-7f8179b6c000 rw-p 0024f000 08:03 18383227                   /opt/lsf9/9.1/linux2.6-glibc2.3-x86_64/lib/libbat.so
+7f8179b6c000-7f8179ba3000 rw-p 00000000 00:00 0
+7f8179ba3000-7f8179bcb000 r-xp 00000000 08:03 966685                     /tmp/idas-local/lib/libdrmaa.so.0.1.1
+7f8179bcb000-7f8179dcb000 ---p 00028000 08:03 966685                     /tmp/idas-local/lib/libdrmaa.so.0.1.1
+7f8179dcb000-7f8179dcc000 r--p 00028000 08:03 966685                     /tmp/idas-local/lib/libdrmaa.so.0.1.1
+7f8179dcc000-7f8179dcd000 rw-p 00029000 08:03 966685                     /tmp/idas-local/lib/libdrmaa.so.0.1.1
+7f8179dcd000-7f8179e8d000 rw-p 00000000 00:00 0
+7f8179e8d000-7f8179fcd000 ---p 00000000 00:00 0
+7f8179fcd000-7f817a1cd000 rw-p 00000000 00:00 0
+7f817a261000-7f817a296000 r--s 00000000 08:03 31114242                   /var/cache/nscd/group
+7f817a296000-7f817a2ab000 r-xp 00000000 08:03 180673                     /tmp/jna6899742752492926046.tmp
+7f817a2ab000-7f817a3aa000 ---p 00015000 08:03 180673                     /tmp/jna6899742752492926046.tmp
+7f817a3aa000-7f817a3ac000 rw-p 00014000 08:03 180673                     /tmp/jna6899742752492926046.tmp
+7f817a3ac000-7f817a5ac000 rw-p 00000000 00:00 0
+7f817a5ac000-7f817a7ac000 rw-p 00000000 00:00 0
+7f817a7ac000-7f817a7bd000 r-xp 00000000 00:1e 8232090                    /gapp/x64linux/opt/java/jdk/jdk1.8.0_60/jre/lib/amd64/libnio.so
+7f817a7bd000-7f817a9bc000 ---p 00011000 00:1e 8232090                    /gapp/x64linux/opt/java/jdk/jdk1.8.0_60/jre/lib/amd64/libnio.so
+7f817a9bc000-7f817a9bd000 rw-p 00010000 00:1e 8232090                    /gapp/x64linux/opt/java/jdk/jdk1.8.0_60/jre/lib/amd64/libnio.so
+7f817a9bd000-7f817abbd000 rw-p 00000000 00:00 0
+7f817abbd000-7f817adbd000 rw-p 00000000 00:00 0
+7f817adbd000-7f817afbd000 rw-p 00000000 00:00 0
+7f817afbd000-7f817b1bd000 rw-p 00000000 00:00 0
+7f817b1bd000-7f817b3bd000 rw-p 00000000 00:00 0
+7f817b3bd000-7f817b5bd000 rw-p 00000000 00:00 0
+7f817b5bd000-7f817b7bd000 rw-p 00000000 00:00 0
+7f817b7bd000-7f817b853000 r--s 01107000 00:1e 8232123                    /gapp/x64linux/opt/java/jdk/jdk1.8.0_60/jre/lib/ext/jfxrt.jar
+7f817b853000-7f817b85f000 r-xp 00000000 08:03 26171009                   /lib/libnss_files-2.11.1.so
+7f817b85f000-7f817ba5e000 ---p 0000c000 08:03 26171009                   /lib/libnss_files-2.11.1.so
+7f817ba5e000-7f817ba5f000 r--p 0000b000 08:03 26171009                   /lib/libnss_files-2.11.1.so
+7f817ba5f000-7f817ba60000 rw-p 0000c000 08:03 26171009                   /lib/libnss_files-2.11.1.sotest.sh: line 27: 23360 Aborted                 java -cp ${classpath} org.broadinstitute.gatk.queue.QCommandLine -S ${HELLO} -disableJobReport -l DEBUG -jobRunner Drmaa -jobQueue short -run
+
