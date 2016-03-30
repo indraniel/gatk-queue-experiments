@@ -10,10 +10,11 @@ export LD_LIBRARY_PATH=/tmp/idas-local/lib:$LD_LIBRARY_PATH
 
 echo $PATH
 #export PATH=/gscmnt/gc2801/analytics/jeldred/drmaa_versions/lsf_drmaa-1.0.4:/gscmnt/gc2801/analytics/jeldred/GenomeSTRiP/bin:$PATH
-IDAS_GATK=/gscmnt/gc2802/halllab/idas/jira/BIO-1662/vendor/local/jars/GenomeAnalysisTK-3.5-idas-experimental-e4c9106-2016.03.23.jar
+IDAS_GATK=/gscmnt/gc2802/halllab/idas/jira/BIO-1662/vendor/local/jars/GenomeAnalysisTK-3.5-idas-experimental-a4da018-2016.03.30.jar
+IDAS_QUEUE=${SV_DIR}/lib/gatk/Queue.jar
 
 #classpath="${SV_DIR}/lib/SVToolkit.jar:${SV_DIR}/lib/gatk/GenomeAnalysisTK.jar:${SV_DIR}/lib/gatk/Queue.jar"
-classpath="${SV_DIR}/lib/SVToolkit.jar:${IDAS_GATK}:${SV_DIR}/lib/gatk/Queue.jar"
+classpath="${SV_DIR}/lib/SVToolkit.jar:${IDAS_GATK}:${IDAS_QUEUE}"
 
 java -version
 #java -Xmx22g -cp ${classpath} org.broadinstitute.gatk.queue.QCommandLine \
