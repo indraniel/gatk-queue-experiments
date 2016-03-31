@@ -5,15 +5,28 @@ import org.ggf.drmaa._
 
 object MultipleJobs {
   def main(args: Array[String]): Unit = {
-    var session = new JnaSessionFactory().getSession
-    session.init(null)
-    submitLSFJobs(session)
-    session.exit()
+    for (i <- 1 to 2) {
+      jobExecutor(i)
+    }
   }
 
-  def submitLSFJobs(session: org.ggf.drmaa.Session): Unit = {
+  def jobExecutor(i: Int): Unit = {
+    val job = new Thread(new Runnable {
+      def run() {
+        println("Entering jobExecutor run (%d)".format(i))
+        var session = new JnaSessionFactory().getSession
+        session.init(null)
+        println("jobExecutor (%d): submitting lsf job".format(i))
+        submitLSFJob(session, i)
+        session.exit()
+      }
+    })
+    job.start()
+  }
+
+  def submitLSFJob(session: org.ggf.drmaa.Session, num: Int): Unit = {
     var jobId: String = ""
-    var outFile: String = "%s/%s".format(sys.env("PWD"), "scala-lsf-test.txt")
+    var outFile: String = "%s/%s-%d.txt".format(sys.env("PWD"), "scala-lsf-test", num)
     val drmaaJob: JobTemplate = session.createJobTemplate
     drmaaJob.setJobName("foo")
     drmaaJob.setWorkingDirectory(sys.env("PWD"))
@@ -21,7 +34,7 @@ object MultipleJobs {
     drmaaJob.setJoinFiles(true)
     drmaaJob.setNativeSpecification("-q short")
     drmaaJob.setRemoteCommand("/bin/echo")
-    var cmdArgs: List[String] = List("Hello", "World", "(Scala)")
+    var cmdArgs: List[String] = List("Hello", "World", "(Scala)", num.toString() )
     drmaaJob.setArgs(cmdArgs)
     try {
       jobId = session.runJob(drmaaJob)

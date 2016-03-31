@@ -10,4 +10,4 @@ MultipleJobs.class: MultipleJobs.scala
 	scalac -classpath $(CLASSPATH) $<
 
 clean:
-	rm *.class scala-lsf-test.txt
+	rm *.class scala-lsf-test*.txt
