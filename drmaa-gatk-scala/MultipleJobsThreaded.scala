@@ -3,7 +3,7 @@ import org.broadinstitute.gatk.utils.jna.drmaa.v1_0.JnaSessionFactory
 import org.broadinstitute.gatk.queue.QException
 import org.ggf.drmaa._
 
-class MultipleJobs {
+class MultipleJobsThreaded {
   @volatile
   var session: org.ggf.drmaa.Session = _
 
@@ -64,9 +64,9 @@ class MultipleJobs {
   }
 }
 
-object MultipleJobs {
+object MultipleJobsThreaded {
   def main(args: Array[String]): Unit = {
-    val mj = new MultipleJobs()
+    val mj = new MultipleJobsThreaded()
     mj.init()
     for (i <- 1 to 2) {
       mj.jobExecutor(i)
