@@ -4,7 +4,9 @@ import org.broadinstitute.gatk.queue.QException
 import org.ggf.drmaa._
 
 class MultipleJobs {
+  @volatile
   var session: org.ggf.drmaa.Session = _
+
   var setup: Int = 0
 
   def init(): Unit = {
