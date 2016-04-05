@@ -6,8 +6,8 @@ JAVA_HOME := /gapp/x64linux/opt/java/jdk/jdk1.8.0_60
 JAVA := $(JAVA_HOME)/bin/java
 
 EXPERIMENTAL_GATK := /gscmnt/gc2802/halllab/idas/jira/BIO-1662/vendor/local/jars
-GATK  := $(EXPERIMENTAL_GATK)/GenomeAnalysisTK-3.5-idas-experimental-8904624-2016.04.04.jar
-QUEUE := $(EXPERIMENTAL_GATK)/Queue-3.5-idas-experimental-8904624-2016.04.04.jar
+GATK  := $(EXPERIMENTAL_GATK)/GenomeAnalysisTK-3.5-idas-experimental-d178c0e-2016.04.05.jar
+QUEUE := $(EXPERIMENTAL_GATK)/Queue-3.5-idas-experimental-d178c0e-2016.04.05.jar
 
 DRMAA_LIBS := /tmp/idas-local/lib
 
