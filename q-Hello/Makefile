@@ -27,6 +27,7 @@ run: Hello.q
 	 -l DEBUG \
 	 -jobRunner MGI \
 	 -jobQueue short \
+	 -jobNative "-M 8000000" \
 	 -run
 
 clean:
