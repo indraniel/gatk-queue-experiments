@@ -1,0 +1,70 @@
+$ bash test.sh
+/gapp/x64linux/opt/java/jdk/jdk1.8.0_60/bin:/gscmnt/gc2801/analytics/jeldred/GenomeSTRiP/bin:/gscuser/idas/software/scala/scala-2.11.8/bin:/gapp/x64linux/opt/java/jdk/jdk1.8.0_60/bin:/gscuser/idas/.goenv/shims:/gscuser/idas/.Renv/shims:/gscuser/idas/.plenv/shims:/gscuser/idas/.pyenv/plugins/pyenv-virtualenv/shims:/gscuser/idas/.pyenv/libexec:/gscuser/idas/.pyenv/plugins/python-build/bin:/gscuser/idas/.pyenv/plugins/pyenv-virtualenv/bin:/gscuser/idas/.pyenv/shims:/gscuser/idas/.rbenv/shims:/gscuser/idas/.goenv/bin:/gscuser/idas/.Renv/bin:/gscuser/idas/.pyenv/bin:/gscuser/idas/.rbenv/bin:/gscuser/idas/.plenv/bin:/gscuser/idas/vim74/bin:/gscuser/idas/software/cmake/bin:/bin:/gscuser/idas/bin:/gapp/noarch/bin:/gapp/x64linux/bin:/gapp/ia32linux/bin:/gsc/scripts/opt/genome/current/user/bin:/gsc/scripts/bin:/gsc/scripts/opt/lims/snapshots/current/bin:/gsc/bin:/gsc/java/bin:/opt/lsf9/9.1/linux2.6-glibc2.3-x86_64/etc:/opt/lsf9/9.1/linux2.6-glibc2.3-x86_64/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/gsc/scripts/gsc/info:/gsc/scripts/opt/lims/snapshots/current/bin:/gsc/pkg/oracle/10gR2/db_1/bin
+java version "1.8.0_60"
+Java(TM) SE Runtime Environment (build 1.8.0_60-b27)
+Java HotSpot(TM) 64-Bit Server VM (build 25.60-b23, mixed mode)
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/gscmnt/gc2802/halllab/idas/jira/BIO-1662/vendor/local/jars/GenomeAnalysisTK-3.5-idas-experimental-86152f0-2016.03.30.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/gscmnt/gc2802/halllab/idas/jira/BIO-1662/vendor/github/gatk-protected/protected/gatk-queue-package-distribution/target/gatk-queue-package-distribution-3.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+INFO  13:47:32,192 QScriptManager - Compiling 1 QScript
+DEBUG 13:47:32,194 QScriptManager - Compilation directory: /tmp/Q-Classes-3200551789640556218
+INFO  13:47:35,281 QScriptManager - Compilation complete
+INFO  13:47:35,445 HelpFormatter - ----------------------------------------------------------------------
+INFO  13:47:35,446 HelpFormatter - Queue v3.5-2-g86152f0, Compiled 2016/03/30 17:48:08
+INFO  13:47:35,446 HelpFormatter - Copyright (c) 2012 The Broad Institute
+INFO  13:47:35,446 HelpFormatter - For support and documentation go to http://www.broadinstitute.org/gatk
+DEBUG 13:47:35,447 HelpFormatter - Current directory: /gscuser/idas/genome-strip-test/q-Hello
+INFO  13:47:35,448 HelpFormatter - Program Args: -S /gscmnt/gc2801/analytics/jeldred/scripts/Hello.q -disableJobReport -l DEBUG -jobRunner Drmaa -jobQueue short -run
+INFO  13:47:35,449 HelpFormatter - Executing as idas@linus261.gsc.wustl.edu on Linux 2.6.35-31-generic amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27.
+INFO  13:47:35,449 HelpFormatter - Date/Time: 2016/03/30 13:47:35
+INFO  13:47:35,449 HelpFormatter - ----------------------------------------------------------------------
+INFO  13:47:35,449 HelpFormatter - ----------------------------------------------------------------------
+INFO  13:47:35,459 QCommandLine - Scripting HelloWorld
+DEBUG 13:47:35,483 QGraph - adding QNode: 0
+INFO  13:47:35,499 QCommandLine - Added 2 functions
+INFO  13:47:35,502 QGraph - Generating graph.
+INFO  13:47:35,514 QGraph - Running jobs.
+DEBUG 13:47:35,599 FunctionEdge - Starting: /gscuser/idas/genome-strip-test/q-Hello > echo hello world
+INFO  13:47:35,599 FunctionEdge - Output written to /gscuser/idas/genome-strip-test/q-Hello/Hello-1.out
+[MGI] Gonna submit an LSF job dude!
+[MGI] Entered runJob dude
+[MGI] Got a Memory object dude
+[MGI] jobTemplate object looks like:
+org.broadinstitute.gatk.utils.jna.drmaa.v1_0.JnaJobTemplate@1a2afa0
+[MGI] End of jobTemplate object dump.
+[MGI] Got a JnaJobTemplate object dude
+Job <9109801> is submitted to default queue <long>.
+[MGI] Got past checkError dude
+INFO  13:47:41,063 DrmaaJobRunner - Submitted job id: 9109801
+DEBUG 13:47:41,064 FunctionEdge - Starting: /gscuser/idas/genome-strip-test/q-Hello > echo hello world 2
+INFO  13:47:41,064 FunctionEdge - Output written to /gscuser/idas/genome-strip-test/q-Hello/Hello-2.out
+[MGI] Gonna submit an LSF job dude!
+[MGI] Entered runJob dude
+[MGI] Got a Memory object dude
+[MGI] jobTemplate object looks like:
+org.broadinstitute.gatk.utils.jna.drmaa.v1_0.JnaJobTemplate@1ba2200
+[MGI] End of jobTemplate object dump.
+[MGI] Got a JnaJobTemplate object dude
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007fce276adef3, pid=2305, tid=140523413206784
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_60-b27) (build 1.8.0_60-b27)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.60-b23 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [libc.so.6+0x7eef3]  cfree+0x53
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# An error report file with more information is saved as:
+# /gscuser/idas/genome-strip-test/q-Hello/hs_err_pid2305.log
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+test.sh: line 27:  2305 Aborted                 java -cp ${classpath} org.broadinstitute.gatk.queue.QCommandLine -S ${HELLO} -disableJobReport -l DEBUG -jobRunner Drmaa -jobQueue short -run
+
